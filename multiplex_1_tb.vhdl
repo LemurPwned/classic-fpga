@@ -23,26 +23,46 @@ begin
   multiplex_1_0: multiplex_1 port map (smi=>smi, smo=>smo, se=>se);
   process
   begin
-    smi <= "0000001";
+    smi <= "1111011";
     se <= "000";
     wait for 5 ns;
-    smi <= "0000010";
     se <= "001";
     wait for 5 ns;
-    smi <= "1111011";
-    se <= "011";
-    wait for 5 ns;
-    smi <= "0000100";
     se <= "010";
     wait for 5 ns;
-    smi<= "0010000";
+    se <= "011";
+    wait for 5 ns;
     se <= "100";
     wait for 5 ns;
-    smi <= "0100000";
+
+    smi <= "1110111";
+    se <= "000";
+    wait for 5 ns;
+    se <= "001";
+    wait for 5 ns;
+    se <= "010";
+    wait for 5 ns;
+    se <= "011";
+    wait for 5 ns;
+    se <= "100";
+    wait for 5 ns;
     se <= "101";
     wait for 5 ns;
-    smi <= "0111111";
     se <= "110";
+    wait for 5 ns;
+    se <= "111";
+    wait for 5 ns;
+
+    smi <= "1011111";
+    se <= "000";
+    wait for 5 ns;
+    se <= "110";
+    wait for 5 ns;
+    se <= "010";
+    wait for 5 ns;
+    se <= "111";
+    wait for 5 ns;
+    se <= "101";
     wait for 5 ns;
     wait;
   end process;
