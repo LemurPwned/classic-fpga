@@ -34,6 +34,12 @@ component_tb.vhdl - testbench <br />
 8. View the results <br />
     gtkwave component.vcd <br />
 Remeber to drag signals into viewing pane and adjust the time scale
+
+## To automate the debugging process, use Makefile included in the directory. <br />
+Just add the new .vhdl files and objects to corresponding fields using "\" and run analysis with: <br />
+~make anal <br />
+to clean the .o, .cf, work and other redundant files (except testbench and design file) run: <br />
+~make clean <br />
     
     #### Have fun!
   
