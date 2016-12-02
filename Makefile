@@ -1,12 +1,12 @@
 GHDL=ghdl
 GHDL_COMP=\
-	abs_1.vhdl
+	grey.vhdl
 GHDL_TB=\
-	abs_1_tb.vhdl
+	grey_tb.vhdl
 GHDL_COMP_E=\
-	abs_1
+	grey
 GHDL_TB_E=\
-	abs_1_tb
+	grey_tb
 RUNTIME=100ns
 
 
@@ -20,3 +20,4 @@ anal:
 clean:
 	echo "Cleaning up the mess..."
 	rm -f *.o *_tb work*.cf e*.lst *.vcd
+	rm -f $(GHDL_COMP_E) $(GHDL_TB_E)
